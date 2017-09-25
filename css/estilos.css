@@ -1,0 +1,251 @@
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font-family: "Roboto-Regular" , sans-serif;
+	background-color: #e0e0e0;
+}
+
+header{
+	background-color: #12364B;
+	/*background-color: #165B68;*/
+	padding: 0px 20px;
+	width: 100%;
+	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo{
+	display: flex;
+}
+
+header .logo img{
+	width: 50px;
+	height: 50px;
+	vertical-align: top;
+	margin-right: 20px;
+}
+
+header .logo h1{
+	color: #fff;
+	line-height: 50px;
+}
+
+header nav{
+	width: 70%;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+}
+
+header nav a{
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 30px;
+	/*background-color: #9b4242;*/
+}
+
+header nav a:hover{
+	/*background-color: #313E53;*/
+	background-color: rgba(0,0,0,0.2);
+}
+
+section{
+	background-color: #fff;
+	width: 80%;
+	margin: auto;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+section h2{
+	font-size: 2rem;
+	/*color: #FE4949;*/
+	color: #424242;
+	margin-top: 100px;
+	margin-bottom: 60px;
+	/*text-shadow: 2px 2px 0px rgba(150, 150, 150, 1);*/
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, .1);
+	text-transform: uppercase;
+
+}
+
+section.pedidos div.elegir{
+	/*background-color: red;*/	
+	display: flex;
+	flex-flow: row wrap;
+	
+}
+
+section.pedidos div.elegir div.ordenar{
+	/*background-color: pink;*/
+	height: 300px;
+	border-right: solid 1px;
+	padding: 20px;
+	flex: 1 1 48%;
+	display: flex;
+	align-items: center;
+}
+
+section.pedidos div.elegir div.recoger{
+	/*background-color: red;*/
+	height: 300px;
+	padding: 20px;
+
+	flex: 1 1 48%;
+	display: flex;
+	align-items: center;
+}
+
+section.pedidos div.elegir div div h3{
+	text-align: center;
+	
+}
+
+section.pedidos button{
+	width: 100%;
+	/*background-color: #375B7A;*/
+	border: none;
+	color: white;
+	font-size: 1.3rem;
+	height: 60px;
+	padding: 5px;
+	cursor: pointer; 
+	border-radius: 40px;
+}
+section.pedidos div.recoger button{
+	background-color: #32B235; 
+}
+
+section.pedidos div.ordenar button{
+	/*background-color: #165B68;*/
+	background-color: #F45151;
+}
+
+section.pedidos div.ordenar button:hover{
+	/*background-color: #497738;*/
+	/*background-color: #32B235;*/
+	/*background-color: rgba(22,91,104,0.8);*/
+	background-color: #BC4747;
+}
+
+section.pedidos div.recoger button:hover{
+	/*background-color: rgba(50,178,53,0.8);*/
+	background-color: #438B48;
+}
+
+section.contacto{
+	background-color: #12364B;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	padding: 20px 0;
+	width: 100%;
+	text-align: center;
+}
+
+section.contacto h2{
+	flex: 1 1 100%;
+	margin-bottom: 20px;
+	margin-top: 0px;
+	color: yellow;
+}
+
+section.contacto div.social a{
+	font-size: 2rem;
+	text-decoration: none;
+	color: #3b5998;
+}
+
+section.contacto div.social a:nth-child(2){
+	color: #e52d27;
+}
+
+section.contacto div.social a:last-child{
+	color: #55acee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px){
+	section.pedidos div.elegir{
+		flex-direction: column;
+
+	}
+
+	section.pedidos div.elegir div.ordenar{
+		border-right: none;
+		border-bottom: solid 1px;
+	}
+
+	section.pedidos h2{
+		margin-bottom: 10px;
+		margin-top: 60px;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	header{
+		flex-direction: column;
+		padding: 0;
+	}
+
+	header .logo{
+		margin:20px 0;
+	}
+
+	header nav{
+		width: 100%;
+		justify-content: center;
+	}
+
+}
+
+@media screen and (max-width: 700px){
+	section{
+		width: 100%;
+	}
+	section.pedidos h2{
+		margin-bottom: 120px;
+	}
+	section.pedidos div.elegir div.ordenar{
+		flex-direction: column-reverse;
+	}
+	section.pedidos div.elegir div.recoger{
+		flex-direction: column;
+	}
+}
