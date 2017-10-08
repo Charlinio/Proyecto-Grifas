@@ -5,16 +5,18 @@
 }
 body{
 	font-family: "Roboto-Regular" , sans-serif;
-	background-color: #e0e0e0;
+	background-color: white;
 }
 
 header{
-	background-color: #12364B;
-	/*background-color: #165B68;*/
+	background-color: rgb(18,54,75);
 	padding: 0px 20px;
+	top: 0px;
+	left: 0px;
 	width: 100%;
-	
-	display: flex;
+	position: fixed;
+	z-index: 50;
+	display: flex;	
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
@@ -25,10 +27,10 @@ header .logo{
 }
 
 header .logo img{
-	width: 50px;
 	height: 50px;
-	vertical-align: top;
 	margin-right: 20px;
+	vertical-align: top;
+	width: 50px;
 }
 
 header .logo h1{
@@ -38,7 +40,6 @@ header .logo h1{
 
 header nav{
 	width: 70%;
-
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-end;
@@ -49,115 +50,165 @@ header nav a{
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: 30px;
-	/*background-color: #9b4242;*/
 }
 
 header nav a:hover{
-	/*background-color: #313E53;*/
 	background-color: rgba(0,0,0,0.2);
 }
 
 section{
 	background-color: #fff;
-	width: 80%;
+	width: 100%;
 	margin: auto;
-
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
+	padding-bottom: 140px;
 }
 
+section.pedidos{
+	margin-top: 78px;
+}
+
+
 section h2{
-	font-size: 2rem;
-	/*color: #FE4949;*/
+	/*border-top: solid 1px;*/
+	font-size: 3rem;
 	color: #424242;
-	margin-top: 100px;
 	margin-bottom: 60px;
-	/*text-shadow: 2px 2px 0px rgba(150, 150, 150, 1);*/
+	margin-top: 70px;
 	text-shadow: 2px 2px 0px rgba(0, 0, 0, .1);
 	text-transform: uppercase;
+	text-align: center;
+	padding-top: 10px;
+	width: 100%;
+}
 
+section.galeria{
+	background-image: url(./../img/h22.jpg);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+    height: 640px;
+
+}
+
+
+
+section.galeria h2{
+	color: white;
+	/*border-bottom: solid 4px rgba(50,178,53,0.5);*/
+	/*border-bottom: solid 4px rgba(1,75,153,0.5);*/
+	border-bottom: solid 3px rgba(255,235,58,0.3);
+	padding-bottom: 2px;
+	height: 70px;
+	width: 90%;
+	min-width: 200px;
+	z-index: 2;
+	margin-bottom: 100px;
+}
+
+section.pedidos h2{
+	margin-top: 70px;
+	margin-bottom: 100px;
+}
+
+section.contacto h2{
+	font-size: 2rem;
 }
 
 section.pedidos div.elegir{
-	/*background-color: red;*/	
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row-reverse wrap;
 	
 }
 
+
 section.pedidos div.elegir div.ordenar{
-	/*background-color: pink;*/
 	height: 300px;
-	border-right: solid 1px;
+	border-left: solid 1px;
+	border-bottom: solid 1px;
 	padding: 20px;
+	padding-bottom: 80px;
 	flex: 1 1 48%;
 	display: flex;
 	align-items: center;
 }
 
 section.pedidos div.elegir div.recoger{
-	/*background-color: red;*/
 	height: 300px;
 	padding: 20px;
-
 	flex: 1 1 48%;
 	display: flex;
 	align-items: center;
+	border-bottom: solid 1px;
+		padding-bottom: 80px;
+}
+
+section.pedidos div.elegir div div{
+	width: 300px
 }
 
 section.pedidos div.elegir div div h3{
-	text-align: center;
-	
-}
+	width: 80%;
+	font-weight: unset;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	margin: auto;
 
+}
+section.pedidos div.elegir div div h3:first-child{
+	width: 80%;
+	font-weight: bold;
+	padding-bottom: 5px;
+	margin: auto;
+	text-align: center;
+}
 section.pedidos button{
-	width: 100%;
-	/*background-color: #375B7A;*/
+	width: 300px;
 	border: none;
 	color: white;
 	font-size: 1.3rem;
 	height: 60px;
 	padding: 5px;
 	cursor: pointer; 
-	border-radius: 40px;
+	border-radius: 20px;
 }
 section.pedidos div.recoger button{
 	background-color: #32B235; 
 }
 
 section.pedidos div.ordenar button{
-	/*background-color: #165B68;*/
 	background-color: #F45151;
 }
 
 section.pedidos div.ordenar button:hover{
-	/*background-color: #497738;*/
-	/*background-color: #32B235;*/
-	/*background-color: rgba(22,91,104,0.8);*/
 	background-color: #BC4747;
 }
 
 section.pedidos div.recoger button:hover{
-	/*background-color: rgba(50,178,53,0.8);*/
 	background-color: #438B48;
 }
 
 section.contacto{
 	background-color: #12364B;
+	/*background-color: #031D00;*/
 	flex-direction: column;
 	align-items: center;
 	color: white;
 	padding: 20px 0;
 	width: 100%;
 	text-align: center;
+	border: none;
 }
 
 section.contacto h2{
 	flex: 1 1 100%;
 	margin-bottom: 20px;
 	margin-top: 0px;
-	color: yellow;
+	color: white;
 }
 
 section.contacto div.social a{
@@ -174,78 +225,140 @@ section.contacto div.social a:last-child{
 	color: #55acee;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1200px){
-	section.pedidos div.elegir{
-		flex-direction: column;
-
-	}
-
-	section.pedidos div.elegir div.ordenar{
-		border-right: none;
-		border-bottom: solid 1px;
-	}
-
-	section.pedidos h2{
-		margin-bottom: 10px;
-		margin-top: 60px;
-	}
+section.galeria div.pizzas{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	z-index: 5;
+	height: 400px;
+	width: 90%;
+	overflow-y: hidden;
+	
 }
 
-@media screen and (max-width: 1000px){
-	header{
-		flex-direction: column;
-		padding: 0;
-	}
+section.galeria div.pizzas div{
+	margin-bottom: 100px;
+	border-radius: 20px;
+	padding: 2px;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-start;
+	cursor: pointer;
+	background-color: rgba(0,0,0,1);
+}
 
-	header .logo{
-		margin:20px 0;
-	}
+section.galeria div.pizzas div div{
+	background-color: rgba(0,0,0,0.9);
+	width: 300px;
+	height: 52px;
+	position: absolute;
+	margin-left: 0;
+	margin-top: 250px;
+	border-top-right-radius: 0%;
+	border-top-left-radius: 0%;
+	border: none;
+	transition: 0.3s ease;
+	overflow: hidden;
+	cursor: default;
+}
 
-	header nav{
-		width: 100%;
-		justify-content: center;
-	}
+section.galeria div.pizzas div div:hover{
+	background-color: rgba(0,0,0,0.9);
+	margin: 0px;
+	height: 302px;
+	border-radius: 20px;
+}
+
+section.galeria div.pizzas div div h3{
+	color: white;
+	text-transform: uppercase;
+	margin: 10px auto 0px;
+	text-align: center;
+	height: 30px;
+	/*border-bottom: solid 4px rgba(50,178,53,0.5);*/
+	/*border-bottom: solid 4px rgba(1,75,153,0.5);*/
+	border-bottom: solid 4px rgba(255,87,34,0.5);
+	padding-bottom: 2px;
+	width: 95%;
+}
+section.galeria div.pizzas div div h3 i{
+	/*color: rgba(50,178,53,0.5);*/
+	color: rgba(255,235,58,0.8);
+}
+
+section.galeria div.pizzas div div p.ingredientes{
+	/*color: #797878;*/
+	color: rgba(255,235,58,0.8);
+	/*border-bottom: dashed 2px;*/
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2rem;
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+}
+
+section.galeria div.pizzas div div p{
+	color: white;
+	margin: 15px auto 0px;
+	font-size: 1.1rem;
+	display: block;
+	width: 80%;
+	/*text-align: justify;*/
+}
+
+section.galeria div.pizzas div div button{
+	width: 80%;
+	height: 40px;
+	/*background-color: rgba(254,193,8,0.8);*/
+	background-color: rgba(50,178,53,0.5);
+	/*background-color: rgba(255,235,58,0.8);*/
+	text-transform: uppercase;
+	color: white;
+	border: none;
+	border-radius: 15px;
+	margin: 95px auto;
+	font-weight: bold;
+}
+
+section.galeria div.pizzas div div button:hover{
+	/*background-color: rgba(254,193,8,0.6);*/
+	background-color: rgba(50,178,53,0.6);
+	/*background-color: rgba(1,75,153,0.6);*/
+	cursor: pointer;
+}
+
+section.galeria div.pizzas div img{
+	width: 300px;
+	height: 300px;
+	border-radius: 20px;
+}
+
+.botones{
+	position: absolute;
+	width: 90%;
+	height: 30px;
+	border: none;
+	background-color: rgba(255,255,255,0);
+	border-radius: 10px;
+	color: gray;
+	font-size: 1.5rem;
+	cursor: pointer;
+	z-index: 6;
+	outline: 0;
+	outline-color: none;
+}
+
+.botones:hover{
+	background-color: rgba(255,255,255,0.1);
+}
+
+.abajo{
+	margin-top: 590px;
+}
+
+.arriba{
+	margin-top: 170px;
 
 }
 
-@media screen and (max-width: 700px){
-	section{
-		width: 100%;
-	}
-	section.pedidos h2{
-		margin-bottom: 120px;
-	}
-	section.pedidos div.elegir div.ordenar{
-		flex-direction: column-reverse;
-	}
-	section.pedidos div.elegir div.recoger{
-		flex-direction: column;
-	}
-}
