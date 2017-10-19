@@ -1,6 +1,7 @@
 var pizzas = document.getElementById("pizzas");
 var botonAbajo = document.getElementById("btnAbajo");
 var botonArriba = document.getElementById("btnArriba");
+<<<<<<< HEAD
 var apuntar = document.getElementById("apuntar");
 var desc = document.getElementsByClassName("des");
 var abrirDescripcion = document.getElementsByClassName("btn");
@@ -65,6 +66,17 @@ botonAbajo.addEventListener("click", function(){
 		salto=0;
 	}
 	salto += 406;
+=======
+
+var salto = 0;
+
+//402.3999938964844
+botonAbajo.addEventListener("click", function rotar(){
+	if(salto<=0){
+		salto=0;
+	}
+	salto += 402;
+>>>>>>> b7826a6d7fb1dbd63a55ef885dc88dcd10ccdfd3
 	var intervalo = setInterval(function(){
 			pizzas.scrollTop = pizzas.scrollTop + 6;
 			if(pizzas.scrollTop <= salto){
@@ -75,6 +87,7 @@ botonAbajo.addEventListener("click", function(){
 			}
 		}, 6);
 
+<<<<<<< HEAD
 		//----------------------------------RESPONSIVE----------------------------//
 		if(document.body.scrollWidth>300 && document.body.scrollWidth <= 676){
 			if(salto >= 2842){
@@ -134,6 +147,17 @@ botonArriba.addEventListener("click", function(){
 		}
 
 		salto -= 406;
+=======
+		
+
+}, false);
+
+botonArriba.addEventListener("click", function rotar(){
+		if(salto >= 2814){
+			salto=2814;
+		}
+		salto -= 402;
+>>>>>>> b7826a6d7fb1dbd63a55ef885dc88dcd10ccdfd3
 		var intervalo = setInterval(function(){
 			pizzas.scrollTop = pizzas.scrollTop - 6;
 			if(pizzas.scrollTop > salto){
@@ -144,15 +168,37 @@ botonArriba.addEventListener("click", function(){
 			}
 		}, 6);
 
+<<<<<<< HEAD
 		if(salto<=0){
 			botonArriba.style.display = "none";
 			botonArriba.style.animation = "none";
 			botonAbajo.style.animation = "amarillo 1.5s infinite";
 		}
 
+=======
+		if(pizzas.scrollTop <= 0){
+			
+		}
+>>>>>>> b7826a6d7fb1dbd63a55ef885dc88dcd10ccdfd3
 }, false);
 
 
 window.addEventListener("load", function(){
 	botonArriba.style.display = "none";
+<<<<<<< HEAD
 }, false);
+=======
+
+}, false);
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> b7826a6d7fb1dbd63a55ef885dc88dcd10ccdfd3
