@@ -2,11 +2,15 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 	<title>Charly's Pizza</title>
 	<link rel="stylesheet" href="./css/estilos.css" />
 	<link rel="stylesheet" href="./css/font-awesome.min.css" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" href="./css/mediaquerys.css" />
+	<link rel="stylesheet" href="./css/slick-theme.css" />
+	<link rel="stylesheet" href="./css/slick.css" />
 </head>
+
 <body>
 	<header>
 		<div class="logo">
@@ -14,37 +18,150 @@
 			<h1>Charly's Pizza</h1>
 		</div>
 		<nav>
-			<a href="#">Pedidos</a>
-			<a href="#">Contacto</a>
-			<a href="#">Galeria</a>
+			<a href="#pedidos">Ordenar</a>
+			<a href="#contacto">Contacto</a>
+			<a href="#seccionPizzas">Pizzas</a>
 			<a href="#">Iniciar Sesion</a>
 		</nav>
 	</header>
+	<section class="promociones">
+		<div class="slider">
+		 	<div class="combos">
+		  		<h3>COMBO #1</h3>
+				<div class="combo1">
+					<img src="img/Pepperoni-Pizza.png">
+					<img src="img/Pepperoni-Pizza.png" alt="" class="segunda">
+					<img src="img/coca.png" alt="" class="coca">
+					<h4>2 Pizzas Grandes <br>+ 1 Refresco 2L <br><br> <span class="precio">$159.99 MXN</span></h4>
+				</div>
+		  	</div>
+		  	<div class="combos">
+		  		<h3>COMBO #2</h3>
+				<div class="combo1">
+					<img src="img/Pepperoni-Pizza.png">
+					<img src="img/Pepperoni-Pizza.png" alt="" class="segunda">
+					<img src="img/coca.png" alt="" class="coca">
+					<h4>2 Pizzas Grandes <br>+ 1 Refresco 2L <br><br> <span class="precio">$159.99 MXN</span></h4>
+				</div>
+		  	</div>		 	
+		  	<div class="combos">
+		  		<h3>COMBO #3</h3>
+				<div class="combo1">
+					<img src="img/Pepperoni-Pizza.png">
+					<img src="img/Pepperoni-Pizza.png" alt="" class="segunda">
+					<img src="img/coca.png" alt="" class="coca">
+					<h4>2 Pizzas Grandes <br>+ 1 Refresco 2L <br><br> <span class="precio">$159.99 MXN</span></h4>
+				</div>
+		  	</div>
+		</div>
+	</section>
 
-	<section class="pedidos">
+	<section class="pedidos" id="pedidos">
 		<h2>¡Ordene su Pizza!</h2>
+
 		<div class="elegir">
 			<div class="ordenar">
 				<div>
-					<h3>Llevamos su orden hasta su hogar</h3>
-					<button>ORDENE AQUI</button>
+					<h3>OPCIÓN 2</h3>
+					<h3>Le entregamos su pizza en la puerta de su hogar.</h3>
+					<button>ORDENAR</button>
 				</div>
 				<img src="./img/repartidor5.png" alt="" />
 			</div>
 			<div class="recoger">
 				<img src="./img/sucursal.png" alt="" />
 				<div>
-					<h3>Recoja su orden en la sucursal que elija</h3>
-					<button>ORDENE AQUI</button>
+					<h3>OPCIÓN 1</h3>
+					<h3>Recoja su pizza en una de nuestras sucursales.</h3>
+					<button>ORDENAR</button>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="galeria">
-		<h2>Galería</h2>
+	<section class="galeria" id="seccionPizzas">
+		<h2>Pizzas</h2>
+		<button id="btnArriba" class="arriba botones"><i class="fa fa-arrow-circle-up"></i></button>
+		<div class="pizzas" id="pizzas">
+			<div id="pizza1">	
+				<img src="./img/pizza1.jpg" alt="" class="imagensotas" />
+				<div class="des">
+					<h3>Peperoni <i class="fa fa-arrow-circle-up btn"></i></h3>
+					<p class="ingredientes">INGREDIENTES</p>
+					<p>Peperoni, Queso, Salsa de Tomate.</p>
+					<button>Ordenar</button>
+				</div>
+			</div>
+			<div id="pizza2">
+				<img src="./img/pizza2.jpeg" alt="" class="imagensotas" />
+				<div class="des">
+					<h3>Peperoni Chile <i class="fa fa-arrow-circle-up btn"></i></h3>
+					<p class="ingredientes">INGREDIENTES</p>
+					<p>Chile, Peperoni, Queso, Salsa de Tomate.</p>
+					<button>Ordenar</button>
+				</div>
+			</div>
+			<div id="pizza3">
+				<img src="./img/pizza3.jpg" alt="" class="imagensotas" />
+				<div class="des">
+					<h3>Vegetariana <i class="fa fa-arrow-circle-up btn"></i></h3>
+					<p class="ingredientes">INGREDIENTES</p>
+					<p>Queso, Tomate, Salsa de Tomate, Cilantro, Perejil.</p>
+					<button>Ordenar</button>
+				</div>
+			</div>
+			<div id="pizza4">
+				<img src="./img/pizza4.jpg" alt="" class="imagensotas" />
+				<div class="des">
+					<h3>Mexicana <i class="fa fa-arrow-circle-up btn"></i></h3>
+					<p class="ingredientes">INGREDIENTES</p>
+					<p>Carne, Queso, Cilantro, Cebolla Morada, Rabanos.</p>
+					<button>Ordenar</button>
+				</div>
+			</div>
+			<div id="pizza5">
+				<img src="./img/pizza5.jpg" alt="" class="imagensotas" />
+				<div class="des">
+					<h3>Suprema <i class="fa fa-arrow-circle-up btn"></i></h3>
+					<p class="ingredientes">INGREDIENTES</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<button>Ordenar</button>
+				</div>
+			</div>
+			<div id="pizza6">
+				<img src="./img/pizza7.jpg" alt="" class="imagensotas" />
+				<div class="des">
+					<h3>Winnie <i class="fa fa-arrow-circle-up btn"></i></h3>
+					<p class="ingredientes">INGREDIENTES</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<button>Ordenar</button>
+				</div>
+			</div>
+			<div id="pizza7">
+				<img src="./img/pizza9.jpg" alt="" class="imagensotas" />
+				<div class="des">
+					<h3>Picosa <i class="fa fa-arrow-circle-up btn"></i></h3>
+					<p class="ingredientes">INGREDIENTES</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<button>Ordenar</button>
+				</div>
+			</div>
+			<div id="pizza8">
+				<img src="./img/pizza8.jpg" alt="" class="imagensotas" />
+				<div class="des">
+					<h3>Hawaiana <i class="fa fa-arrow-circle-up btn"></i></h3>
+					<p class="ingredientes">INGREDIENTES</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<button>Ordenar</button>
+				</div>
+			</div>
+		</div>
+		<!--<img src="img/finger.png" alt="" class="mano" id="apuntar" />-->
+		<button id="btnAbajo" class="abajo botones"><i class="fa fa-arrow-circle-down"></i></button>
 	</section>
-	<section class="contacto">
+	
+
+	<section class="contacto" id="contacto">
 		<h2>Contacto</h2>
 		<h3>Establecimiento:</h3>
 		<p>ITSNCG. Av. Tecnológico No. 7100 C.P. 31700 Nuevo Casas Grandes, Chihuahua, Mexico</p>
@@ -59,6 +176,23 @@
 			<a href="#"><i class="fa fa-twitter-square"></i></a>
 		</div>
 	</section>
+
+
 	
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script src="./js/smooth-scroll.js"></script>
+	<script src="./js/slick.min.js"></script>
+	<script src="./js/index.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('.slider').slick({
+				autoplay:true,
+				autoplaySpeed:4000,
+				arrows:true,
+				dots:true
+			});
+		});
+	</script>
 </body>
 </html>
